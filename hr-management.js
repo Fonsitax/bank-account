@@ -34,7 +34,7 @@ class WorkingStudent extends Employee {
         this.university = university;
     }
     getDetails() {
-        return `${super.getDetails()} He/She is enrolled at ${this.university}.`;
+        return `${super.getDetails()} Deparment: ${this.department} Enrolled University: ${this.university}.`;
     }
     approvedDayOff(employee, dayOff) {
         console.log(`${this.name} approved "${dayOff}" days to ${employee.name}.`);
@@ -50,7 +50,7 @@ const manager1 = new Manager("Micha", "02", 5500, "Tech");
 console.log(manager1.getDetails());
 //manager1.assignTask(employee1, "Fix bugs");
 
-const workingStudent1 = new WorkingStudent("Machi", "03", 2000, "Sales", "LMU");
+const workingStudent1 = new WorkingStudent("Machi", "03", 2000, "Sales", "University of Minnesota");
 console.log(workingStudent1.getDetails());
 //workingStudent1.approvedDayOff(employee1, 3);
 workingStudent1.approvedDayOff(manager1, 15);
